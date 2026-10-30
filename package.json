@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "A match-3 puzzle where cleared candy shatters into pixels that rain down and briefly assemble into little pixel-art motifs.",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

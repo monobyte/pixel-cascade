@@ -93,3 +93,7 @@ motif resolves only when every pixel has landed exactly on its grid slot.
 - The board sizes itself from the stage box; the Pixi canvas is pinned out of
   flow so its intrinsic size can never feed back into the layout.
 - Everything random is seeded, so a level replays identically.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
