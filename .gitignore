@@ -1,0 +1,35 @@
+# Dependencies & build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Tool caches
+.vite/
+.vitest/
+.ruff_cache/
+.cache/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# Local agent / browser run artifacts
+.artifacts/
+.agent-browser/
+
+# Editor & OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets — nothing in this project reads env vars today, so these should never
+# appear. Ignored defensively so a stray local config can't reach a public repo.
+.env
+.env.*
+!.env.example
+*.pem
+*.key

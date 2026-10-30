@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      name="description"
+      content="Pixel Cascade — a match-3 where cleared candy shatters into pixels that rain down and briefly form pixel-art motifs."
+    />
+    <title>Pixel Cascade</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside id="hud" aria-label="Game status">
+        <header class="brand">
+          <h1 class="brand-title">Pixel<span>Cascade</span></h1>
+          <p class="brand-sub">match &middot; shatter &middot; summon</p>
+        </header>
+
+        <section class="panel level-panel">
+          <p class="chip" id="level-chip">Level 1</p>
+          <h2 class="level-name" id="level-name">&nbsp;</h2>
+          <p class="level-sub" id="level-sub">&nbsp;</p>
+        </section>
+
+        <section class="panel stats-panel">
+          <div class="stat">
+            <span class="stat-label">Score</span>
+            <span class="stat-value" id="score">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Moves</span>
+            <span class="stat-value" id="moves">&ndash;</span>
+          </div>
+        </section>
+
+        <section class="panel goals-panel">
+          <h3 class="panel-title">Goals</h3>
+          <ul id="goals" class="goals"></ul>
+        </section>
+
+        <p class="hint" id="hint">&nbsp;</p>
+
+        <footer class="controls">
+          <button class="btn" id="btn-restart" type="button" title="Restart level (R)">
+            <span aria-hidden="true">&#8635;</span> Restart
+          </button>
+          <button class="btn" id="btn-sound" type="button" aria-pressed="false" title="Toggle sound (M)">
+            <span aria-hidden="true">&#9834;</span> <span id="sound-label">Sound</span>
+          </button>
+          <button class="btn btn-ghost" id="btn-help" type="button" title="How to play (H)">
+            <span aria-hidden="true">?</span> Help
+          </button>
+        </footer>
+      </aside>
+
+      <main id="stage" aria-label="Game board"></main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <div id="overlay" class="overlay" hidden>
+      <div class="card" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+        <p class="eyebrow" id="overlay-eyebrow"></p>
+        <h2 class="overlay-title" id="overlay-title">Pixel Cascade</h2>
+        <div class="overlay-body" id="overlay-body"></div>
+        <div class="overlay-detail" id="overlay-detail"></div>
+        <div class="overlay-actions" id="overlay-actions"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
